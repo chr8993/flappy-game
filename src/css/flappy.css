@@ -1,0 +1,250 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {
+    font-family: 'FlappyGame';
+    src: url('../fonts/04B_19__-webfont.eot');
+    src: url('../fonts/04B_19__-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/04B_19__-webfont.woff2') format('woff2'),
+         url('../fonts/04B_19__-webfont.woff') format('woff'),
+         url('../fonts/04B_19__-webfont.ttf') format('truetype'),
+         url('../fonts/04B_19__-webfont.svg#04b_19regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body
+{
+  width: 100%;
+  margin: 0px;
+  height: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+h1.score
+{
+  font-family: 'FlappyGame';
+  font-size: 60px;
+  color: #fff;
+  position: absolute;
+  left: 0px;
+  width: 100%;
+  text-align: center;
+  top: 5%;
+  letter-spacing: 2px;
+  text-shadow: 7px 7px 0px black, 
+   -4px 4px black, 
+   -4px -4px 0px black, 
+   0px -4px 0px black, 
+   4px -4px black;
+  z-index: 100000000;
+}
+.flappyGame
+{
+  background: url('../img/day.png') repeat-x bottom center;
+  background-size: contain;
+  background-position-y: -3%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.flappyGame .footer
+{
+  position: absolute; 
+  width: 100%; 
+  height: 20%; 
+  bottom: 0px;
+  border-top: 3px solid #533c3f;
+  background: #ddd894;
+  z-index:1;
+  
+}
+.flappyGame .grass_is_green
+{
+  height: 18%;
+  width: 100%;
+  background-color: #74bf2e;
+  background-size: 40px 40px;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.30) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.30) 50%, rgba(255, 255, 255, 0.30) 75%, transparent 75%, transparent);
+  box-shadow: 0px 2px 4px #d0ab50;
+  border-bottom: 3px solid #577f1e;
+  -webkit-animation: progress-bar-stripes 150ms linear infinite;
+  animation: progress-bar-stripes 150ms linear infinite;
+}
+.flappyGame .dark_side
+{
+  height: 100%;
+  box-shadow: inset 0px 3px #e4fa95;
+}
+.flappyGame .game_start
+{
+  position: absolute; 
+  top:25%; 
+  left:50%;
+  width: 20%; 
+  margin-left: -10%;
+}
+.flappyGame .game_start img
+{
+  width: 100%;
+  opacity: 1;
+  transition: ease 300ms;
+  -webkit-transition: ease 300ms;
+  -moz-transition: ease 300ms;
+}
+.flappyGame .tap img 
+{
+  width: 50%;
+  transition: ease 300ms;
+  -webkit-transition: ease 300ms;
+  -moz-transition: ease 300ms;
+  left: 50%; 
+  position: absolute; 
+  opacity: 1;
+  margin-left: -25%;
+}
+.flappyGame canvas
+{
+  height: 80%;
+  width: 100%;
+  position: fixed;
+  z-index; 10000;
+}
+.flappyGame .game_counter
+{
+  position: absolute;
+  width: 100px;
+  left: 50%;
+  margin-left: -50px;
+  top: 10%;
+  transition: ease 300ms;
+  -webkit-transition: ease 300ms;
+  -moz-transition: ease 300ms;
+  opacity: 0;
+}
+.flappyGame .game_counter img
+{
+  width: 50px;
+  float: left;
+  margin-right: -10px;
+  border: none;
+}
+@keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+@-webkit-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-moz-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-ms-keyframes progress-bar-stripes {
+  from {
+    background-position: 40px 0;
+  }
+  to {
+    background-position: 0 0;
+  }
+}
+
+@-o-keyframes progress-bar-stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 40px 0;
+  }
+}
+/*
+
+Media Queries
+
+*/
+@media (max-width: 480px)
+{
+  .flappyGame
+  {
+    background: url('../img/day.png') repeat-x bottom center;
+    background-size: contain;
+    background-position-y: 0px;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .flappyGame .footer
+  {
+    position: absolute; 
+    width: 100%; 
+    height: 24%; 
+    bottom: 0px;
+    border-top: 3px solid #533c3f;
+    background: #ddd894;
+    z-index:1;
+    
+  }
+  .flappyGame .grass_is_green
+  {
+    height: 15%;
+    width: 100%;
+    background-color: #74bf2e;
+    background-size: 40px 40px;
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.30) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.30) 50%, rgba(255, 255, 255, 0.30) 75%, transparent 75%, transparent);
+    box-shadow: 0px 2px 4px #d0ab50;
+    border-bottom: 3px solid #577f1e;
+    -webkit-animation: progress-bar-stripes 260ms linear infinite;
+    animation: progress-bar-stripes 260ms linear infinite;
+  }
+  h1.score
+  {
+    font-family: 'FlappyGame';
+    font-size: 42px;
+    color: #fff;
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    top: 5%;
+    letter-spacing: 2px;
+    text-shadow: 6px 6px 0px black, 
+     -3px 3px black, 
+     -3px -3px 0px black, 
+     0px -3px 0px black, 
+     3px -3px black;
+    z-index: 100000000;
+  }
+  .flappyGame .game_start
+  {
+    position: absolute; 
+    top:25%; 
+    left:50%;
+    width: 60%; 
+    margin-left: -30%;
+  }
+
+}
